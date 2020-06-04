@@ -8,7 +8,7 @@ inoremap {} {}
 autocmd filetype cpp nnoremap <F8> :w <bar> !g++ -std=c++17 -Wshadow -Wall % -o %:r -O2 -Wno-unused-result && ./%:r <CR>
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
 
-
+set clipboard=unnamedplus
 set nu
 augroup numbertoggle
     autocmd!

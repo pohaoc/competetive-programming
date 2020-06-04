@@ -1,6 +1,6 @@
-uint64_t binpow(uint64_t a, uint64_t b, uint64_t m){
+long long binpow(long long a, long long b, int m){
     a %= m;
-    uint64_t res = 1;
+    long long res = 1;
     while(b > 0){
         if(b & 1)
             res=res*a;
