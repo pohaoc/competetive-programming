@@ -1,0 +1,15 @@
+#!/bin/bash
+
+FILE=$1
+extension="${FILE##*.}"
+
+
+if [ "$extension" == "cpp" ]; then
+    cp -n ~/contest/template/template.cpp ./$FILE;
+    #CHANGE THIS LINE TO WHERE YOUR TEMPLATE IS LOCATED
+else
+    echo "Template Does Not Exist"
+    exit
+fi
+
+vim $FILE

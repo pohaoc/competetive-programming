@@ -15,7 +15,7 @@ augroup numbertoggle
     autocmd BufEnter,FocusGained,InsertLeave * set rnu
     autocmd BufLeave,FocusLost,InsertEnter * set nornu
 augroup END
-
+set hls
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
