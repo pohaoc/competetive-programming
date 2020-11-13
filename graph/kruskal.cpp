@@ -36,7 +36,10 @@ int main(){
        cin >> adj[i].u >> adj[i].v >> adj[i].w;
     }
 
-    sort(adj, adj + m);
+    //this is in maximum spanning tree mode
+    sort(adj, adj + m, [](const auto& lhs, const auto& rhs){
+            return lhs.w > rhs.w;
+            });
 
     for(edge e : adj){
         if(find(e.u) != find(e.v)){
