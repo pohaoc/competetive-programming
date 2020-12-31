@@ -8,6 +8,7 @@ inoremap {} {}
 autocmd filetype cpp nnoremap <F8> :w <bar> !g++ -std=c++17 -Wshadow -Wall % -o %:r -O2 -Wno-unused-result && ./%:r <CR>
 autocmd filetype cpp nnoremap <F9> :!%:r<CR>
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
+:ab mt mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 set clipboard=unnamedplus
 set nu
