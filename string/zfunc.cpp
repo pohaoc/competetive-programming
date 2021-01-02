@@ -31,6 +31,7 @@ vector<int> substr_search(string const& s, string const& p){
 
 //comptues the length of the longest common prefix of all string in the vector
 int LCP(vector<string> s){
+    //if(s.size() ==0) return "";
     string combine;
     vector<int> len;
     for(auto &i :s){
@@ -46,11 +47,22 @@ int LCP(vector<string> s){
         res = min(res, v[start]);
         start -= 1;
     }
+
+    /* if we want to return the lcp string
+
+    res = res == INT_MAX ? s[0].size() : res; //if the string is a letter
+    string ans;
+    for(int i = 0 ; i < res ; i++){
+        ans +=  s[0][i];
+    }
+    ans.erase(find(ans.begin(), ans.end() ,'\0'), ans.end());
+
+    */
     return res;
 
 }
 int main(){
-    vector<string> strs ={"a"};
+    vector<string> strs ={"flower", "dog", "flight"};
     auto res = LCP(strs);
     cout << res;
 }
