@@ -2,7 +2,7 @@
 vector<int> oddpalindrome(const string& s){
     int n = s.length();
     vector<int> d1(n);
-        for (int i = 0, l = 0, r = -1; i < n; i++) {
+    for (int i = 0, l = 0, r = -1; i < n; i++) {
         int k = (i > r) ? 1 : min(d1[l + r - i], r - i + 1);
         while (0 <= i - k && i + k < n && s[i - k] == s[i + k]) {
             k++;
