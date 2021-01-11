@@ -1,4 +1,4 @@
-int parent[10001], rank[10001];
+int parent[10001], dist[10001];
 //path compression
 int find(int a){
     if(a == parent[a])
@@ -10,9 +10,9 @@ void merge(int a, int b){
     a = find(a);
     b = find(b);
     if(a != b){
-        if(rank[a] < rank[b])
+        if(dist[a] < dist[b])
             swap(a,b);
         parent[b] = a;
-        rank[a] += rank[b];
+        dist[a] += dist[b];
     }
 }
