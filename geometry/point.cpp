@@ -33,7 +33,7 @@ namespace std{
 
 long double squared_dist(const point &a, const point &b){return norm(a-b);}
 long double euclid_dist(const point &a, const point &b){return abs(a-b);} 
-long double angle_elev(const point &b, const point &a){return arg(b-a);}
+long double angle_elev(const point &a, const point &b){return arg(b-a);}
 point polar_cartes(const long double &r, const long double &theta){return polar(r, theta);}
 point cartesian_polar(const point &a){return point(abs(a), arg(a));}
 
